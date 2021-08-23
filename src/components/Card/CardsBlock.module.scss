@@ -1,0 +1,89 @@
+.card_block {
+  margin-top: 40px;
+}
+.card_block_ul {
+  margin: 0;
+  padding: 0;
+}
+.cardItem {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px 40px 20px 40px;
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.cardLikeBtn {
+  width: 40px;
+  height: 40px;
+  // border: 1px solid #000;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.heart {
+  color: rgb(255, 103, 103);
+  font-size: 30px;
+}
+.idBlock {
+  display: flex;
+  font-size: 10px;
+}
+.idLink {
+  color: rgb(142, 167, 255);
+  word-break: break-word;
+  margin-right: 5px;
+  text-transform: none;
+}
+.content {
+  margin-bottom: 20px;
+  position: relative;
+}
+.chatIcon {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  margin-right: 10px;
+  color: rgb(255, 70, 70);
+  font-size: 20px;
+}
+.text {
+  margin: 12px 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  font-size: 18px;
+  line-height: 1.45;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 1.45;
+  margin-bottom: 17px;
+  color: rgb(46, 46, 46);
+  text-indent: 30px;
+
+  &.favorite {
+    font-weight: bold;
+  }
+}
+.update {
+  font-size: 10px;
+  color: rgb(171, 171, 171);
+  text-transform: none;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .cardItem {
+    padding: 10px;
+    border-radius: 10px;
+  }
+}

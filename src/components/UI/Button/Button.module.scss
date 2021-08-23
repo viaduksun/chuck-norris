@@ -1,0 +1,18 @@
+.Button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 38px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    background-color: rgb(142, 167, 255);
+    background-image: linear-gradient(
+92.01deg
+, rgb(142, 167, 255) 0%, rgb(114, 145, 255) 100%);
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s linear 0s;
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+.header {
+  min-height: 70px;
+  width: 100%;
+  background: rgb(121, 90, 89);
+  z-index: 10;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.headerWrapper {
+  display: flex;
+  align-items: center;
+}
+.headerLogo {
+  display: none;
+  margin-left: 20px;
+  height: 70px;
+  width: 70px;
+  border: 1px solid rgb(75, 39, 235);
+  & img {
+    height: 100%;
+  }
+}
+.headerTitle {
+  flex: 1 1 auto;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  &_2 {
+    display: none;
+  }
+}
+.headerBurger {
+  display: none;
+  font-size: 40px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .headerBurger {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .headerTitle {
+    &_1 {
+      display: none;
+    }
+    &_2 {
+      display: block;
+    }
+  }
+}
