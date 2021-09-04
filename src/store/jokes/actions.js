@@ -5,10 +5,16 @@ export function fetchJokes(selectedCategory, query) {
     return function (dispatch) {
         getJokes(selectedCategory, query).then(response => {
             if (response.hasOwnProperty('total')) {
-                dispatch({type: types.SET_JOKES, payload: { jokes: response.result }})
+                dispatch({ type: types.SET_JOKES, payload: { jokes: response.result } })
             } else {
-                dispatch({type: types.SET_JOKES, payload: { jokes: [response] }})
+                dispatch({ type: types.SET_JOKES, payload: { jokes: [response] } })
             }
         })
+    }
+}
+export const setCurrentPageAction = page => {
+    return {
+        type: types.SET_CURRENT_PAGE,
+        payload: page
     }
 }

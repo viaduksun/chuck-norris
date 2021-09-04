@@ -1,11 +1,17 @@
-import { SET_JOKES } from "./types";
+import { SET_CURRENT_PAGE, SET_JOKES } from "./types";
 
-const initialState = [];
+const initialState = {
+  jokes: [],
+  currentPage: 1
+};
 
 const jokesReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_JOKES: {
-      return action.payload.jokes
+      return { ...state, jokes: action.payload.jokes }
+    }
+    case SET_CURRENT_PAGE: {
+      return { ...state, currentPage: action.payload }
     }
     default:
       return state;

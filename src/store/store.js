@@ -9,28 +9,24 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_E
 
 const localStorageMiddleware = ({ getState }) => next => action => {
     const result = next(action)
-    // console.log(getState());
+    console.log("ACTION", action);
     // if (favoriteTypes.includes(action.type))  {}
     if (action.type === favoriteTypes.ADD_FAVORITE || action.type === favoriteTypes.REMOVE_FAVORITE) {
         const { favorite } = getState();
-        const stringifiedFavorite = JSON.stringify(favorite)
+        console.log('GET STATE', getState());
+        const stringifiedFavorite = JSON.stringify(favorite.favoriteJokes)
         localStorage.setItem('favorite', stringifiedFavorite)
     }
     return result
 }
-
+console.log('FFF', favoriteReducer);
 export const rootReducer = combineReducers({
     favorite: favoriteReducer,
     jokes: jokesReducer
 })
 // JSON.parse(localStorage.getItem('favorite'))
-const initFavorite = JSON.parse(localStorage.getItem('favorite')) || [];
 const store = createStore(
     rootReducer,
-    {
-        jokes: [],
-        favorite: initFavorite
-    },
     compose(applyMiddleware(thunk, localStorageMiddleware), devTools)
 )
 

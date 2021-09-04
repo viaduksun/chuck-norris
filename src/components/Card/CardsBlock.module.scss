@@ -1,5 +1,15 @@
 .card_block {
-  margin-top: 40px;
+  margin: 20px 0 40px 0;
+  padding-bottom: 10px;
+
+  // border: 1px solid #000;
+}
+.count {
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(131, 131, 131);
 }
 .card_block_ul {
   margin: 0;

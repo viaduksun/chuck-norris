@@ -9,16 +9,16 @@ import classNames from "classnames";
 const Favorite = ({ menuActive }) => {
   // const {name} = useUser()
   const { name } = useContext(UserContext);
-  const favoriteAmount = useSelector((state) => state.favorite.length);
+  const favoriteAmount = useSelector(
+    (state) => state.favorite.favoriteJokes.length
+  );
   return (
     <div
       className={classNames(styles.Favorite, {
         [styles.Favorite_active]: menuActive,
       })}
     >
-      <h3>
-        {name} Favorite ({favoriteAmount})
-      </h3>
+      <h3>Yours favorite: ({favoriteAmount})</h3>
       <FavoriteCards />
     </div>
   );

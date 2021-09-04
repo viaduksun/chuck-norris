@@ -12,7 +12,7 @@ import { GrChat } from "react-icons/gr";
 
 const Card = ({ joke }) => {
   const dispatch = useDispatch();
-  const favorites = useSelector((state) => state.favorite);
+  const favorites = useSelector((state) => state.favorite.favoriteJokes);
 
   const isFavorite = favorites.some((elem) => elem.id === joke.id);
 

@@ -1,6 +1,12 @@
-import { ADD_FAVORITE, HANDLE_MENU_FAVORITE } from "./types"
+import { ADD_FAVORITE, HANDLE_MENU_FAVORITE, SET_LOCAL_FAVORITE } from "./types"
 
 
+export const setFavoritesFromLocal = jokes => {
+    return {
+        type: SET_LOCAL_FAVORITE,
+        payload: jokes
+    }
+}
 export const addFavoriteJokeAction = joke => {
     return {
         type: ADD_FAVORITE,
